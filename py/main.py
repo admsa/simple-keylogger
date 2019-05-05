@@ -4,7 +4,7 @@ from thread import Thread
 from input import Input
 
 #shell:startup
-DIR_PATH = "C:/Users/andrew/logs/"
+DIR_PATH = "DIRECTORY_PATH_HERE"
 LOG_PATH = DIR_PATH + time.strftime("%d-%b-%Y") + ".txt"
 LOG_FORMAT = time.strftime("%a, %d %b %Y %H:%M:%S") + ': %(message)s'
 logging.basicConfig(filename=LOG_PATH, level=logging.DEBUG, format=LOG_FORMAT)
