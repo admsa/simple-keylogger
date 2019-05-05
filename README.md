@@ -1,2 +1,4 @@
 # simple-keylogger
-Simple python keylogger
+My simple keylogger implementation for:
+ * python
+ * go

@@ -8,12 +8,13 @@ import (
     "os"
     "log"
     "time"
-    "golang.org/x/sys/windows"
+    "syscall"
+    //"golang.org/x/sys/windows"
     "github.com/TheTitanrain/w32"
 )
 
 var (
-    user32               = windows.NewLazyDLL("user32.dll")
+    user32               = syscall.NewLazyDLL("user32.dll")
     procGetAsyncKeyState = user32.NewProc("GetAsyncKeyState")
 
     quit        = make(chan bool)
