@@ -15,7 +15,6 @@ class Input:
   """
   def press(self, key):
 
-    print(key)
     # Remove a character if it's a backspace
     if key == 'Key.backspace':
       self.text = self.text[:-1]
